@@ -1,6 +1,8 @@
 package com.ashwanipandey.switchapplication.beans;
 
-public class Devices {
+import java.io.Serializable;
+
+public class Devices implements Serializable{
 
     private String deviceName;
     private String deviceType;

@@ -1,9 +1,10 @@
 package com.ashwanipandey.switchapplication.beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoomBean {
+public class RoomBean  implements Serializable {
 
     private String roomName;
     private ArrayList<Devices> devicesList;

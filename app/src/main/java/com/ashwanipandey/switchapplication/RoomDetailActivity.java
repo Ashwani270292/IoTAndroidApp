@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class RoomDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_detail);
         try {
-            roomBean = (RoomBean) getIntent().getParcelableExtra("roomData");
+            roomBean = (RoomBean) getIntent().getExtras().get("roomData");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -50,7 +51,15 @@ public class RoomDetailActivity extends AppCompatActivity {
     }
 
     private void setRoomData(){
+        try {
+
+            getSupportActionBar().setTitle(roomBean.getRoomName());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         roomName.setText(roomBean.getRoomName());
+        //hiding roomName since it is getting showed on title bar
+        roomName.setVisibility(View.GONE);
         if(roomBean.getDevicesList() != null){
             devicesArrayList.addAll(roomBean.getDevicesList());
         }

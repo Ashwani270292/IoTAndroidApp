@@ -45,7 +45,7 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, RoomDetailActivity.class);
-                intent.putExtra("roomData",roomBean.toString());
+                intent.putExtra("roomData",roomBean);
                 context.startActivity(intent);
             }
         });
