@@ -1,0 +1,27 @@
+[
+  {
+    "room":"room1",
+    "device":[
+      {
+        "name":"light1",
+        "deviceType":"light",
+        "status":"off"
+      },
+      {
+        "name":"fan",
+        "deviceType":"fan",
+        "status":"on"
+      },
+      {
+        "name":"fan1",
+        "deviceType":"fan",
+        "status":"off"
+      },
+      {
+        "name":"switch1",
+        "deviceType":"switch",
+        "status":"on"
+      }
+    ]
+  }
+]
